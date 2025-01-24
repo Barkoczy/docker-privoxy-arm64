@@ -15,6 +15,8 @@ docker run -p 8118:8118 quickbiteschronicles/privoxy-arm64:latest
 services:
   privoxy:
     image: quickbiteschronicles/privoxy-arm64:latest
+    volumes:
+      - privoxy_config:/etc/privoxy/config:ro
     ports:
       - "8118:8118"
     deploy:
