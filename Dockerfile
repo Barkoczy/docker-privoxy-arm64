@@ -1,6 +1,6 @@
 FROM arm64v8/debian:bookworm-slim
 
-RUN apt-get update && apt-get install -y privoxy && \
+RUN apt-get update && apt-get install -y privoxy netcat-traditional && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
